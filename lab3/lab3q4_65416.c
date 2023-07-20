@@ -7,10 +7,12 @@ int main() {
 	do {
 		printf("enter a number : ");
 		scanf("%d", &a);
+		if (a <= 0)
+			break;
 		cnt++;
 		sum += a;
-	} while (a != 0);
+	} while (a > 0);
 	printf("sum : %d\n", sum);
-	printf("avg : %f\n", (float) sum / (float) (cnt - 1));
+	printf("avg : %f\n", (float) sum / (float) cnt);
 	return (0);
 }
